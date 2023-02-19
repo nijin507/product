@@ -8,7 +8,7 @@ function login()
 
 function logout()
 {
-    window.location="login.html"
+    window.location="index.html"
 }
 
 function search1()
