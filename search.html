@@ -12,62 +12,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="background-color:brown;">
+<body style="background-image: url(./img/product.jpg);">
 
 
   <form class="example container mt-5"  style="margin:auto;max-width:300px">
-    <input type="text" id="s2" placeholder="Search ID" name="search2">
-    <button type="submit" onclick="alert()"><i class="fa fa-search"></i></button>
-    <h4 style="color:red;">some technical issue!</h4>
+    <input type="text" id="s2" placeholder="Search ID" >
+    <button type="button" onclick="search()"><i class="fa fa-search"></i></button>
   </form>
+  
 
+  
+    <div id="result3" >
+        
+    </div>
+   
 
 
 
 
   <div class="container mt-3">
     <form>
-      <div class="row">
+      <div class="row" >
         <div class="col-25">
           <label  style="color: white;">Product Name</label>
         </div>
         <div class="col-75">
-          <input type="text" class="form-control" id="fname" name="firstname">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label  style="color: white;">Product ID</label>
-        </div>
-        <div class="col-75">
-          <input type="text" class="form-control" id="lname" name="lastname">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label  style="color: white;">Batch Number</label>
-        </div>
-        <div class="col-75">
-          <input type="text" class="form-control" id="lname" name="lastname" >
+          <p style="color: orange;" id="result1"></p>
         </div>
         
       </div>
       <div class="row">
         <div class="col-25">
-          <label style="color: white;">Product Price</label>
+          <label  style="color: white;" >Product ID</label>
         </div>
         <div class="col-75">
-          <input type="text" class="form-control" id="lname" name="lastname" >
+          <p style="color: orange;" id="result2"></p>
         </div>
+      
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label  style="color: white;" >Batch Number</label>
+        </div>
+        <div class="col-75">
+          <p style="color: orange;" id="result3"></p>
+        </div>
+      
       </div>
       <div class="row">
         <div class="col-25">
-          <label style="color: white;">Number of Box</label>
+          <label  style="color: white;" >Price</label>
         </div>
         <div class="col-75">
-          <input type="text" class="form-control" id="lname" name="lastname" >
+          <p style="color: orange;" id="result4"></p>
         </div>
+      
       </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label  style="color: white;" >Number of Box</label>
+        </div>
+        <div class="col-75">
+          <p style="color: orange;" id="result5"></p>
+        </div>
+      
+      </div>
+    
+      
+     
       <div class="row">
         
         <button type="button" onclick="back()" class="btn btn-warning mt-5">Back</button>
