@@ -1,79 +1,76 @@
-function login()
-{
-    
+function login() {
 
 
-    window.location="search_add.html"
+
+    window.location = "search_add.html"
 }
 
-function logout()
-{
-    window.location="index.html"
+function logout() {
+    window.location = "index.html"
 }
 
-function search1()
-{
-    window.location="search.html"
+function search1() {
+    window.location = "search.html"
 }
 
-function add()
-{
-    window.location="product_add.html" 
+function add() {
+    window.location = "product_add.html"
 }
 
-function back()
-{
-    window.location="search_add.html" 
+function back() {
+    window.location = "search_add.html"
 }
 
 
 
-function addProduct()
-{
+function addProduct() {
     //create an object to store
-    product={pname:pname.value,id:pid.value,batch:pbatch.value,price:pprice.value,box:pbox.value}
+    product = { pname: pname.value, id: pid.value, batch: pbatch.value, price: pprice.value, box: pbox.value }
 
     //check the input id is alredy exist
-    if(product.id in localStorage)
-    {
+    if (product.id in localStorage) {
         alert("product id alredy exist")
     }
-    else
-    {
-         //access item from add and convert js type data ton JSON using JSON.stringify methode
-          localStorage.setItem(product.id,JSON.stringify(product))
-          
+    else {
+        //access item from add and convert js type data ton JSON using JSON.stringify methode
+        localStorage.setItem(product.id, JSON.stringify(product))
+        alert("product added")
+
+        window.location = "product_add.html"
+
     }
-}  
+}
 
 
 
 
 
-function search()
-{
+function search() {
     //access the value from the input window
-    vl=sea.value
+    idse = s2.value
 
     //check the value of key is in the local storage
 
-    if(vl in localStorage)
-    {    
+    if (idse in localStorage) {
         //if the key is in localstorage and that convert in to java script using JSON.parse methode and store in emp variable
-        pro=JSON.parse(localStorage.getItem(vl))
+        emp = JSON.parse(localStorage.getItem(idse))
 
-        result.innerHTML=`<h3>NAME: ${pro.pname} <h3>ID: ${pro.id} <h3>DESIGNATION: ${pro.batch} <h3>SALARY: ${pro.price} <h3>EXPERIANCE: ${pro.box}   `
+        result1.innerHTML= `${emp.pname}`
+        result2.innerHTML= `${emp.id}`
+        result3.innerHTML= `${emp.batch}`
+        result4.innerHTML= `${emp.price}`
+        result5.innerHTML= `${emp.box}`
     }
-    else
-    {    
-
-        result.innerHTML=""
-        //if the id is not present print an alert message
-        alert("the ID is not present")
+    else {
+        
+        window.location = "search.html"
+        alert("ID is not predent")
+        
     }
 }
 
-function alert()
-{
-    alert("something wrong ....its not work")
-}
+
+
+
+
+
